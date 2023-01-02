@@ -1,6 +1,5 @@
 function makeFriendsList(friends) {
   // ваш код...
-  const { body } = document;
   const ul = document.createElement("ul");
 
   for (let i = 0; i < friends.length; i++) {
@@ -9,8 +8,6 @@ function makeFriendsList(friends) {
 
     ul.insertAdjacentHTML("beforeend", li);
   }
-
-  body.appendChild(ul);
 
   return ul;
 }
