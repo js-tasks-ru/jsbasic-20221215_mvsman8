@@ -1,6 +1,6 @@
 function makeFriendsList(friends) {
   // ваш код...
-  const body = document.body;
+  const { body } = document;
   const ul = document.createElement("ul");
 
   for (let i = 0; i < friends.length; i++) {
