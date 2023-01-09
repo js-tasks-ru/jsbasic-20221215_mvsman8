@@ -7,15 +7,15 @@ export default class Carousel {
 
   constructor(slides) {
     this._slides = slides;
-    this._createCarousel();
-    this._handleCarousel();
+    this._render();
+    this._handler();
   }
 
   get elem() {
     return this._carousel;
   }
 
-  _createCarousel() {
+  _render() {
     const carousel = createElement(`
       <div class="carousel">
         <div class="carousel__arrow carousel__arrow_right">
@@ -56,7 +56,7 @@ export default class Carousel {
     `);
   }
 
-  _handleCarousel() {
+  _handler() {
     const [nextBtn, prevBtn] = this.elem.children;
 
     prevBtn.style.display = "none";
