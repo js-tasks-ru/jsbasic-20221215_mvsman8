@@ -31,7 +31,7 @@ export default class RibbonMenu {
   }
 
   update() {
-    this.#ref("item").classList.add("ribbon__item-active");
+    this.#ref("item").classList.add("ribbon__item_active");
     this.#ref("arrow_right").classList.add("ribbon__arrow_visible");
   }
 
@@ -52,10 +52,10 @@ export default class RibbonMenu {
 
       for (const item of categories.children) {
         if (item === e.target) {
-          item.classList.add("ribbon__item-active");
+          item.classList.add("ribbon__item_active");
           this.ribbonSelectHandler(item);
         } else {
-          item.classList.remove("ribbon__item-active");
+          item.classList.remove("ribbon__item_active");
         }
       }
     };
