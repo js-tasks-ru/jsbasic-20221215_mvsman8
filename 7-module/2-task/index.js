@@ -42,16 +42,7 @@ export default class Modal {
 
   open() {
     this.handleOpen();
-
-    this.#modal("close").onclick = this.handleClose.bind(this);
-
-    const onKeydownCloseHandler = ({ code }) => {
-      if (code === "Escape") {
-        this.handleClose();
-      }
-    };
-
-    document.onkeydown = onKeydownCloseHandler;
+    this.events();
   }
 
   handleOpen() {
@@ -68,6 +59,18 @@ export default class Modal {
     this.#el("body").classList.remove("is-modal-open");
 
     this.removeEvents();
+  }
+
+  events() {
+    this.#modal("close").onclick = this.handleClose.bind(this);
+
+    const onKeydownCloseHandler = ({ code }) => {
+      if (code === "Escape") {
+        this.handleClose();
+      }
+    };
+
+    document.onkeydown = onKeydownCloseHandler;
   }
 
   removeEvents() {
