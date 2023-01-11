@@ -42,12 +42,13 @@ export default class Modal {
 
   open() {
     this.handleOpen();
-    this.events();
   }
 
   handleOpen() {
     this.#el("body").append(this.elem);
     this.#el("body").classList.add("is-modal-open");
+
+    this.events();
   }
 
   close() {
