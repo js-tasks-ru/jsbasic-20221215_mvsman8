@@ -6,6 +6,7 @@ export default class StepSlider {
     this.initValues();
     this.mouseEvent();
     this.pointerEvent();
+    this.updateThumb();
   }
 
   #createComponent(node, elem) {
